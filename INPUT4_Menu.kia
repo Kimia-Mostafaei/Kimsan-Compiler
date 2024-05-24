@@ -1,0 +1,30 @@
+
+# Example 4: Text menu demo .....................
+
+# Function factorial
+def fact(num):
+    f = 1
+    if num == 0:
+       return f
+    else:
+       val = 1
+       while (val<=num):
+           f = f*val
+           val+=1
+       return f
+
+# Main function
+def main():
+    data = input('Enter a number: ')
+    try:
+        val = int(data)
+        if (val<0):
+            print('Number must be natural')
+        else:
+            factorial = fact(val)
+            print("The factorial of",val,"is",factorial)
+    except:
+        print('Input must be a natural number')
+
+# Calling main function
+main()

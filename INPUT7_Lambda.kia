@@ -1,0 +1,55 @@
+
+# Example 7 (extra): Lambda calculus .....................
+
+def true(x, y):
+    #TRUE = λx.λy.x
+    return x
+
+def false(x, y):
+    #FALSE = λx.λy.y
+    return y
+
+def Not(x):
+    #NOT = λx.x FALSE TRUE
+    return x(false, true)
+
+def And(x, y):
+    #AND = λx.λy. x y FALSE
+    return x(y, false)
+
+def Or(x, y):
+    #OR = λx.λy. x TRUE y
+    return x(true, y)
+
+def Xor(x, y):
+    #XOR = λx.λy. x (y FALSE TRUE) y
+    return x(y(false, true), y)
+
+def Imp(x, y):
+    #IMPLIES = λx.λy. x y TRUE
+    return x(y, true)
+
+def main():
+    # Tests
+    print('Testing..................')
+    logic1=true
+    print('Logic1: true =', logic1.__name__)
+    logic2=false
+    print('Logic2: false =', logic2.__name__)
+    logic3=Not(false)
+    print('Logic3: Not(false) =', logic3.__name__)
+    logic4=Not(true)
+    print('Logic4: Not(true) =', logic4.__name__)
+    logic5=Or(true,false)
+    print('Logic5: Or(true,false) =', logic5.__name__)
+    logic6=And(true,false)
+    print('Logic6: And(true,false) =', logic6.__name__)
+    logic7=Xor(true,false)
+    print('Logic7: Xor(true,false) =', logic7.__name__)
+    logic8=Imp(true,false)
+    print('Logic8: Imp(true,false) =', logic8.__name__)
+
+if __name__ == "__main__":
+    main()
+
+# (End of demo)  ..........................

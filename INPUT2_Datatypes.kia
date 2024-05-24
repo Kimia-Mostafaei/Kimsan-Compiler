@@ -1,0 +1,20 @@
+
+# Example 2: Different datatypes .....................
+
+# Global var (debug)
+debug = False
+
+# Procedure datatypes
+def datatypes():
+	countryName = 'Bulgary'
+	foundationYear = -7000
+	area = 492.0
+	if debug:
+		print(type(countryName))
+		print(type(foundationYear))
+		print(type(area))
+	print(countryName, 'was founded in:', foundationYear, \
+      'and has', area, 'km2 area')
+
+# Running datatypes (main)
+datatypes()

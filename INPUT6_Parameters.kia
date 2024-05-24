@@ -1,0 +1,18 @@
+
+# Example 6 (extra): Command line parameters .....................
+
+import sys
+
+# Procedure to show command line
+def showCmdLine():
+    # Total arguments
+    n = len(sys.argv)
+    print("Total arguments passed:", n)
+    # Arguments passed
+    print("Name of Python script:", sys.argv[0])
+    print("Arguments passed:", end = " ")
+    for i in range(1, n):
+        print(sys.argv[i], end = " ")
+
+# Main execution
+showCmdLine()

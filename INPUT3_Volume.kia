@@ -1,0 +1,13 @@
+
+# Example 3: Sphere volume calculus .....................
+
+# Function volume
+def volume():
+    pi = 3.1415926535897931
+    radian = float(input('Radius of sphere: '))
+    volume = (4/3) * (pi * radian ** 3)
+    return volume
+
+# Running volume (main)
+vol = volume()
+print('Volume: ', vol)
